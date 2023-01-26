@@ -1,7 +1,7 @@
 import csv
 from email import charset
 
-with open('c:/Users/pauld/git/textToSpeechWatson/data/speechs.csv', newline='') as f:
+with open(r'C:\Users\p.hernandez\git\textToSpeechWatson\data\professornet-episode004-2.csv', newline='') as f:
     reader = csv.reader(f, delimiter=';', quotechar='"')
     data = list(reader)
 

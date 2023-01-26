@@ -1,7 +1,7 @@
 import csv
 from email import charset
 
-with open('c:/Users/pauld/git/textToSpeechWatson/data/professornet-episode002-02.csv', newline='',  encoding="utf8") as f:
+with open(r'C:\Users\p.hernandez\git\textToSpeechWatson\data\professornet-episode005.csv', newline='',  encoding="utf8") as f:
     reader = csv.reader(f, delimiter=';', quotechar='"')
     data = list(reader)
 
@@ -10,6 +10,7 @@ import config
 
 base_url = config.base_url
 api_key =  config.api_key
+output_folder = r'C:/Users/p.hernandez/git/textToSpeechWatson/output/episode005/'
 
 # Authentication
 from ibm_watson import TextToSpeechV1, ApiException
@@ -27,13 +28,14 @@ text_to_speech.set_default_headers({'x-watson-learning-opt-out': "true"})
 speaker = ['en-US_HenryV3Voice','en-US_KevinV3Voice','en-GB_JamesV3Voice','en-US_MichaelV2Voice']
 
 for row in data:
-    print('Importing file: ' + row[0].replace(':','-'))
-    print('output\episode002\\'+ (row[0]).replace(':','-').replace('"','')+'.wav')
-    with open('output\episode002\corrections\\' + (row[0]).replace(':','-').replace('"','')+'.wav', 'wb') as audio_file:
+    output_file = output_folder+ (row[0])
+    print('Importing file: ' + row[0])
+    print('Output folder: ' + output_file )
+    with open(output_file +'.wav', 'wb') as audio_file:
         audio_file.write(
             text_to_speech.synthesize(
                 row[1],
-                voice='en-US_KevinV3Voice',
+                voice='en-GB_KateVoice',
                 accept='audio/wav'        
             ).get_result().content)
 

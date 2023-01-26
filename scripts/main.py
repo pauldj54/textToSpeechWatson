@@ -18,7 +18,7 @@ text_to_speech.set_service_url(base_url)
 text_to_speech.set_default_headers({'x-watson-learning-opt-out': "true"})
 
 #text_to_speech.set_disable_ssl_verification(True)
-speaker = ['en-US_HenryV3Voice','en-US_KevinV3Voice','en-GB_JamesV3Voice','en-US_MichaelV2Voice']
+speaker = ['en-GB_CharlotteV3Voice','en-GB_KateVoice','en-GB_KateV3Voice']
 
 for s in speaker:
     with open('output\linkedin_'+s+'.wav', 'wb') as audio_file:

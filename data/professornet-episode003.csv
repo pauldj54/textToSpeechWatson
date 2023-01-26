@@ -1,0 +1,5 @@
+"01_Intro_01";"According to Wikipedia, network security consists of the policies, processes and practices adopted to prevent, detect and monitor unauthorized access, misuse, modification, or denial of a computer network and network-accessible resources."
+"01_Intro_02";"In the public cloud some systems are accessible by default from the internet. Cloud based network security should be applied to minimize the chances that malicious actors can access, change, or destroy information."
+"01_Intro_03";"Synapse Analytics is a service running in the public cloud and need to communicate with different other cloud services or on-premises systems."
+"01_Intro_04";"As network security best practice, in most of the cases the internet access to certain services should be closed and only communication in the internal azure backbone should be allowed."
+"01_Intro_05";"Azure private endpoints are created to help azure services to communicate with each other providing privately accessible IP addresses. A private endpoint is a special network interface for an azure service in your virtual network."
